@@ -1,11 +1,11 @@
-import React from "react";
-import SomoView from "./SomeView";
+import React from 'react'
+import SomoView from './SomeView'
 
 export default {
   component: SomoView,
-  title: "Atoms/SomoView",
-};
+  title: 'Atoms/SomoView'
+}
 
-const Template = (args) => <SomoView />;
+const Template = (args) => <SomoView />
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})
