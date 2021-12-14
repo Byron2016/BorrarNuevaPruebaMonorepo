@@ -1,8 +1,8 @@
-// const RULES = {
-//   OFF: "off",
-//   WARN: "warn",
-//   ERROR: "error",
-// };
+const RULES = {
+  OFF: 'off',
+  WARN: 'warn',
+  ERROR: 'error',
+}
 module.exports = {
   env: {
     browser: true,
