@@ -3,29 +3,29 @@ async function supportCssModules(config) {
   // console.log('>>>config', config.module.rules)
   // console.log('1=================================')
 
-  config.module.rules.find((rule) => rule.test.toString() === "/\\.css$/").exclude = /\.module\.css$/;
+  config.module.rules.find((rule) => rule.test.toString() === '/\\.css$/').exclude = /\.module\.css$/
 
   config.module.rules.push({
     test: /\.module\.css$/,
     use: [
-      "style-loader",
+      'style-loader',
       {
-        loader: "css-loader",
+        loader: 'css-loader',
         options: {
           modules: true,
         },
       },
     ],
-  });
+  })
 
-  return config;
+  return config
 }
 
 module.exports = {
-  stories: ["../src/**/*.stories.@(js|jsx|ts|tsx)"],
-  addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
-  framework: "@storybook/react",
+  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
+  framework: '@storybook/react',
 
   // FIXME: Support CSS Modules for Storybook
   webpackFinal: supportCssModules,
-};
+}

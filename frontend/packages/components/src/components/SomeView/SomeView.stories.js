@@ -3,7 +3,7 @@ import SomoView from './SomeView'
 
 export default {
   component: SomoView,
-  title: 'Atoms/SomoView'
+  title: 'Atoms/SomoView',
 }
 
 const Template = (args) => <SomoView />
